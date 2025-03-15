@@ -3,8 +3,9 @@ from ingestion.utils.data_ingestor import DataIngestor
 from ingestion.utils.config_loader import ConfigLoader
 from ingestion.utils.file_path_manager import FilePathManager
 
+# test 01
 if __name__ == "__main__":
-    config = ConfigLoader()
+    config = ConfigLoader() 
     spark = create_spark_session()
     ingestor = DataIngestor(spark)
     path_manager = FilePathManager(config.base_data_dir, config.lakehouse_s3_path)
