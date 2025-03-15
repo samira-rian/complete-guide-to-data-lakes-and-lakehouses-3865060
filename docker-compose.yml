@@ -1,4 +1,4 @@
-version: "3.9"
+#version: "3.9"
 
 services:
   dremio:
@@ -19,6 +19,8 @@ services:
       MINIO_ROOT_USER: minio
       MINIO_ROOT_PASSWORD: minioadmin
     container_name: minio
+    volumes:
+      - minio-data:/data 
     command: server /data --console-address ":9001"
 
   nessie:
@@ -58,3 +60,6 @@ networks:
   default:
     name: lakehousenet
     driver: bridge
+volumes:
+  minio-data:
+  Access Denied.
