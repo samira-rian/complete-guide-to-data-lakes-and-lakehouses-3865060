@@ -1,7 +1,7 @@
 import os
 import logging
 import boto3
-from file_path_manager import FilePathManager
+from ingestion.utils.file_path_manager import FilePathManager
 
 class DocumentDataIngestor:
     def __init__(self, s3_bucket: str = None, aws_access_key_id: str = None, aws_secret_access_key: str = None, aws_s3_endpoint: str = None):
