@@ -20,7 +20,7 @@ services:
       MINIO_ROOT_PASSWORD: minioadmin
     container_name: minio
     volumes:
-      - minio-data:/data 
+      - minio-data:/data
     command: server /data --console-address ":9001"
 
   nessie:
@@ -62,4 +62,3 @@ networks:
     driver: bridge
 volumes:
   minio-data:
-  Access Denied.
